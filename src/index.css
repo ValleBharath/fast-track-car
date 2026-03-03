@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand Colors */
+  --color-brand-navy: #0D1B2A;
+  --color-brand-blue: #2563A8;
+  --color-brand-orange: #E07B1A;
+  --color-brand-blue-deep: #1A3A5C;
+  --color-brand-sky: #D6E8F7;
+  
+  /* Status Colors */
+  --color-status-success: #16A34A;
+  --color-status-warning: #D97706;
+  --color-status-error: #DC2626;
+
+  /* Spacing & Radius */
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-[#374151] bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-brand-navy font-bold tracking-tight;
+  }
+}
+
+.glass-nav {
+  @apply bg-brand-navy/95 backdrop-blur-md border-b border-white/10;
+}
+
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(13, 27, 42, 0.55) 0%, rgba(13, 27, 42, 0.75) 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-shadow-hover {
+  @apply transition-all duration-300;
+}
+
+.card-shadow-hover:hover {
+  @apply -translate-y-1;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
