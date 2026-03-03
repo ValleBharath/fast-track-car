@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
   const phoneNumber = '917352525252'; // Format: country code + number without +

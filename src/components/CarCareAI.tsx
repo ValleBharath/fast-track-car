@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, Send, X, Sparkles, ExternalLink, Loader2 } from 'lucide-react';
 import { getCarCareAdvice } from '../services/geminiService';
 

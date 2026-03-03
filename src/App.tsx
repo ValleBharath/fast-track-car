@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Star, MapPin, Phone, Mail, Clock, ShieldCheck, Award, Users } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ServiceCard from './components/ServiceCard';
+import BookingWizard from './components/BookingWizard';
 import CarCareAI from './components/CarCareAI';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
-import ContactForm from './components/ContactForm';
 import { SERVICES, TESTIMONIALS } from './constants';
 
 export default function App() {
-  const handleBookClick = () => {
-    window.open('https://calendly.com/bharathvallebharath/fast-track-car-1', '_blank');
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [selectedServiceId, setSelectedServiceId] = useState<string | undefined>(undefined);
+
+  const handleBookClick = (serviceId?: string) => {
+    setSelectedServiceId(serviceId);
+    setIsBookingOpen(true);
   };
 
   return (
@@ -202,8 +206,7 @@ export default function App() {
               <div className="p-12 lg:p-16 space-y-10">
                 <div>
                   <h2 className="text-4xl font-extrabold text-brand-navy tracking-tighter mb-4">GET IN TOUCH</h2>
-                  <p className="text-gray-500 mb-8">Have questions about our services or need a custom quote? We're here to help.</p>
-                  <ContactForm />
+                  <p className="text-gray-500">Have questions about our services or need a custom quote? We're here to help.</p>
                 </div>
 
                 <div className="space-y-6">
@@ -284,6 +287,12 @@ export default function App() {
       <Footer />
 
       {/* Overlays & Widgets */}
+      <BookingWizard
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+        initialServiceId={selectedServiceId}
+      />
+      
       <CarCareAI />
       <WhatsAppButton />
     </div>

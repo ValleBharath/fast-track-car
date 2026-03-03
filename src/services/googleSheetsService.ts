@@ -2,7 +2,7 @@
  * Service to handle Google Sheets integration via Google Apps Script
  */
 
-const GOOGLE_SHEETS_URL = import.meta.env.VITE_GOOGLE_SHEETS_URL;
+const GOOGLE_SHEETS_URL = (import.meta as any).env.VITE_GOOGLE_SHEETS_URL;
 
 export interface BookingData {
   name: string;
