@@ -22,7 +22,7 @@ export const SERVICES: Service[] = [
     description: 'Deep cleaning and conditioning of all interior surfaces.',
     price: 'Starting from $120',
     duration: '2 hours',
-    image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800',
     inclusions: [
       'Full vacuuming',
       'Steam cleaning of upholstery',

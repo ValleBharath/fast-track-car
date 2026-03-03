@@ -10,7 +10,7 @@ export default function ContactForm() {
     message: ''
   });
 
-  const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyYCFDiXRVQsJMp_-AB2mZEvdmFLFvnIQXg_-PlC9z_3awjCA0IIXVIqGWNGaXvHsxbAg/exec';
+  const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxFJIEJnynvihoqcJQ2D1_IQhzWOruQwEKL_v9lvrETXECwzRV-_CCKbAqG2f3fQuM4/exec';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
